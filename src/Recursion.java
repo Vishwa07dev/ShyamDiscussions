@@ -39,6 +39,13 @@ public class Recursion {
   }
 
   public static void main(String[] args) {
+
+    long a = 12 ;
+
+
+    Long pqr  = 1234L ;
+
+    a= pqr;
     char[] arr1 = {'a','b','a'};
     //char[] arr2 = {'a','b','c','d','a'};
 
