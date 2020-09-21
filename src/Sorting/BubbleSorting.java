@@ -27,6 +27,29 @@ import java.util.Hashtable;
 
 public class BubbleSorting {
 
+
+
+  public static void insertionSort(int[] arr){
+
+    /**
+     * arr = [ 5,4,1,7,6]
+     *
+     * v = 4
+     */
+    for(int i=1 ;i<arr.length;i++){
+      int v = arr[i];
+
+      int j = i ;
+       while(j-1 >=0 && arr[j-1] > v){
+         arr[j]=arr[j-1];
+         j--;
+       }
+       arr[j]=v ;
+    }
+  }
+
+
+
   /**
    *
    * [ 4,1,2,5,3]    [1,2,4,3]      [1,2,3]     [1,2]   [1]
@@ -62,8 +85,6 @@ public class BubbleSorting {
 
   public void selectionSort(int[] arr){
 
-    Hashtable ht = new Hashtable();
-
     int n = arr.length ;
 
     for(int i=0;i<n;i++){
@@ -89,5 +110,22 @@ public class BubbleSorting {
    *
    *
    */
+
+  public static void main(String[] args) {
+    int[] arr = {4,5,1,2,9,6};
+
+    for(int i : arr){
+      System.out.print(i + " ");
+    }
+
+    System.out.println();
+    insertionSort(arr);
+
+    for(int i : arr){
+      System.out.print(i + " ");
+    }
+
+
+  }
 
 }
