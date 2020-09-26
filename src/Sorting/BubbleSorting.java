@@ -37,14 +37,14 @@ public class BubbleSorting {
      * v = 4
      */
     for(int i=1 ;i<arr.length;i++){
-      int v = arr[i];
+      int v = arr[i];  // 4 , 1 ,7 ,6
 
-      int j = i ;
-       while(j-1 >=0 && arr[j-1] > v){
-         arr[j]=arr[j-1];
-         j--;
+      int j = i ;  // 1,2,3,4
+      while(j-1 >=0 && arr[j-1] > v){  // True && 5 >4 - true 5>1
+         arr[j]=arr[j-1];   // [1,4,5,7,7]
+         j--;// 1,0 ,3
        }
-       arr[j]=v ;
+       arr[j]=v ; //[1,4,5,6,7]
     }
   }
 
